@@ -1,12 +1,6 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 
-SEX_TO_NUM_DICT = {
-    "male": 1,
-    "female": 0
-}
-
-
 def main():
     # load data
     data = pd.read_csv("titanic.csv")
