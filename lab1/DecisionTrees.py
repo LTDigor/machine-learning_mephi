@@ -18,7 +18,7 @@ def main():
     df = data[['Pclass', 'Fare', 'Age', 'Sex']]
 
     # replace sex with number
-    df['Sex'] = df['Sex'].apply(lambda x: SEX_TO_NUM_DICT[x])
+    df = df.replace(to_replace=['male', 'female'], value=[0, 1])
 
     # get target variable
     survived = data['Survived']
